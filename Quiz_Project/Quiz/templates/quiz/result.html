@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Your Score: {{ score }} / {{ total }}</h1>
+    <h2>Review:</h2>
+    <ul>
+        {% for item in result_data %}
+            <li>
+                <strong>{{ item.question }}</strong><br>
+                Your answer: {{ item.user_answer }}<br>
+                {% if not item.is_correct %}
+                    Correct answer: <span style="color: green;">{{ item.correct_answer }}</span>
+                {% else %}
+                    <span style="color: green;">Correct!</span>
+                {% endif %}
+            </li><br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
