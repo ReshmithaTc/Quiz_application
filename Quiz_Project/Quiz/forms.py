@@ -15,3 +15,4 @@ class QuizForm(forms.Form):
                 widget=forms.RadioSelect,
                 required=True
             )
+
